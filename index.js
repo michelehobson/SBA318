@@ -4,19 +4,20 @@ const path = require('path');
 
 app.use(express.static('./styles'));
 
-const animals = require('./dataRoutes/animals');
-const architecture = require('./dataRoutes/architecture');
-const landscapes = require('./dataRoutes/landscapes');
-const people = require('./dataRoutes/people');
-const water = require('./dataRoutes/water');
-const weather = require('./dataRoutes/weather');
-const home = require('./dataRoutes/home');
+const animals = require('./data/animals');
+const architecture = require('./data/architecture');
+const landscapes = require('./data/landscapes');
+const people = require('./data/people');
+const water = require('./data/water');
+const weather = require('./data/weather');
+const home = require('./data/home');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 app.get('/', (req, res) => {res.render('home')});
 app.get('/animals', (req, res) => {res.render('animals')});
+app.get('/architecture', (req, res) => {res.render('architecture')});
 app.get('/landscapes', (req, res) => {res.render('landscapes')});
 app.get('/people', (req, res) => {res.render('people')});
 app.get('/water', (req, res) => {res.render('water')});
