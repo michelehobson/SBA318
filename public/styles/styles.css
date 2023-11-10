@@ -1,68 +1,51 @@
-body {
-    overflow: hidden;
-    background-color: #F1F1F1;
-}
 h1 {
     display: flex;
     justify-content: center;
+    /* align-items: center; */
     font-family: 'Kay Pho Du', serif;
     font-weight: 700;
     font-size: 4em;
-    margin-top: 100px;
+    margin-top: 50px;
 }
-
-/* FOOTER */
-#divFooterLinks {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    width: 80vw;
-    margin: 75px auto 0px auto;
-    
-}
-#footer {
+.footer {
+    /* display: flex;
+    justify-content: center;
+    align-content: flex-end; */
     padding: 20px;
     text-align: center;
     background: #ddd;
-    font-size: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 10px;
     width: 100vw;
-    margin: 0px auto 0px auto;
-    height: 125px;
-    position: absolute;
-    bottom: 0;
+    height: 500px;
+
 }
-.ftrLinks, span{
-    color: #8e8b8b;
+.ftrLinks {
+    color: #ddd;
     text-decoration: none;
 }
 .credits {
     display: flex;
     justify-content: center;
-    color: #8e8b8b;
+    color: #ddd;
     text-decoration: none;
     margin: 0px auto 0px auto;
 }
 
-/* MENU */
 .menuLinkStyle {
     list-style-type: none;
     font-family: 'Arsenal', sans-serif;
     text-decoration: none;
-    /* color: #ddd; */
-    color: #8e8b8b;
+    color: #ddd;
     margin: -20px 10px 0px 10px;
 }
-a:hover {
-    color: orangered;
+.myNavStyle a:hover {
+    color: #D2DBDF !important;
 }
-a:active, a:focus {
-    /* color: #475F6B !important; */
-    color: #1f4456;
+.myNavStyle a:active, .myNavStyle a:focus  {
+    color: #475F6B !important;
 }
-/* a:active, a:focus {
-    color: red;
-   
-} */
 .myNavStyle {
     display: flex;
     flex-flow: row nowrap;
@@ -72,16 +55,15 @@ a:active, a:focus {
     left: 50%;
     transform: translatex(-50%);
 }
-
 .primaryHR {
     width: 100vw;
 }
-
 /* IMAGE CLASSES */
 .gallery {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    /* width: 80vw; */
     width: 65vw;
     margin: 200px auto 0px auto;
     order: 0;
@@ -96,8 +78,8 @@ a:active, a:focus {
 
 .arrows {
     font-size: 4em;
-    color: rgb(175, 96, 96);
-    background-color: #F1F1F1;
+    color: whitesmoke;
+    background-color: #383849;
     cursor: pointer;
 }
 
