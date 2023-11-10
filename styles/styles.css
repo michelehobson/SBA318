@@ -1,0 +1,18 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-family: 'Kay Pho Du', serif;
+    font-weight: 700;
+    font-size: 4em;
+    margin-top: 50px;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+.ftrLinks {
+    color: black;
+    text-decoration: none;
+}
