@@ -1,4 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const architecture = require('../data/architecture')
+const architecture = require('../public/data/architecture')
+
+module.exports = router;

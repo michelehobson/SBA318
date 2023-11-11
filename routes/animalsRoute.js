@@ -1,51 +1,26 @@
 const express = require('express');
 const router = express.Router();
 
-const animals = require('../data/animals');
+const animals = require('../public/data/animals')
 
 // RETURN ALL IMAGES
 router.get('/', (req, res) => {
-    res.json(animals);
+    // console.log("here")
+    const image = [animals[0].image]
+    res.render('animals', {image});
 })
 
-// UPLOAD AN IMAGE
-router.post((req, res) => {
-    if(req.body.image && req.body.name) {
-        if(animals.find((a) => i.image == req.body.image)) {
-            res.json({error: 'Image already exist'})
-            return;
-        }
-
-        const animal = {
-            id: animals[animals.length - 1].id + 1,
-            image: req.body.image,
-            name: req.body.name,
-        };
-        animals.push(animal);
-        res.json(animals[animals.length -1]);
-    }
-})
-
-// GET SPECIFIC IMAGES
+// GET SPECIFIC IMAGE
 router.get('/:id', (req, res, next) => {
-    const animal = animals.find((a) => i.id == req.params.id);
-    if(animal) {
-        res.json(animal);
-    } else next();
-
-})
-
-// UPDATE IMAGE
-router.delete((req, res, next) => {
-    const animal = animals.find((a, i) => {
-        if(a.id == req.params.id) {
-            animals.splice(a, 1);
-            return true;
-        }
+        const animal = animals.find((a) => a.id == req.params.id);
+        console.log(animal.id)
+        if(animal) {
+            const image = [animals[animal.id].image]
+            const artist = [animals[animal.id].name]
+            res.render('animals', {image, artist});
+        } else {
+            next()
+        };
     })
-    if(animal) {
-        res.json(animal);
-    } else next();
-})
 
 module.exports = router;

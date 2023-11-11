@@ -12,3 +12,4 @@ const data = [
     {id: 11, image:'https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=1600', name:'Jimmy Teoh'},
     {id: 12, image:'https://images.pexels.com/photos/1534057/pexels-photo-1534057.jpeg?auto=compress&cs=tinysrgb&w=1600', name:'James Wheeler'}
 ]
+module.exports = data;

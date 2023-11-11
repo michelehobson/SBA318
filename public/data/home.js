@@ -12,3 +12,4 @@ const data = [
     {id: 11, image:'', name:''},
     {id: 12, image:'', name:''}
 ]
+module.exports = data;

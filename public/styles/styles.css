@@ -1,51 +1,36 @@
+body {
+    /* overflow: hidden; */
+    background-color: #F1F1F1;
+}
 h1 {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     font-family: 'Kay Pho Du', serif;
     font-weight: 700;
     font-size: 4em;
-    margin-top: 50px;
-}
-.footer {
-    /* display: flex;
-    justify-content: center;
-    align-content: flex-end; */
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 10px;
-    width: 100vw;
-    height: 500px;
-
-}
-.ftrLinks {
-    color: #ddd;
-    text-decoration: none;
-}
-.credits {
-    display: flex;
-    justify-content: center;
-    color: #ddd;
-    text-decoration: none;
-    margin: 0px auto 0px auto;
+    margin-top: 100px;
 }
 
+/* MENU */
 .menuLinkStyle {
     list-style-type: none;
     font-family: 'Arsenal', sans-serif;
     text-decoration: none;
-    color: #ddd;
+    /* color: #ddd; */
+    color: #8e8b8b;
     margin: -20px 10px 0px 10px;
 }
-.myNavStyle a:hover {
-    color: #D2DBDF !important;
+a:hover {
+    color: orangered;
 }
-.myNavStyle a:active, .myNavStyle a:focus  {
-    color: #475F6B !important;
+a:active, a:focus {
+    /* color: #475F6B !important; */
+    color: #1f4456;
 }
+/* a:active, a:focus {
+    color: red;
+   
+} */
 .myNavStyle {
     display: flex;
     flex-flow: row nowrap;
@@ -55,22 +40,20 @@ h1 {
     left: 50%;
     transform: translatex(-50%);
 }
-.primaryHR {
-    width: 100vw;
-}
+
 /* IMAGE CLASSES */
 .gallery {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    /* width: 80vw; */
     width: 65vw;
-    margin: 200px auto 0px auto;
+    margin: 20px auto 0px auto;
     order: 0;
 }
 
 .gallery img {
-    width: calc(60vw / 4.4);
+    /* width: calc(60vw / 4.4); */
+    width: calc(16vw);
     margin: 0px 5px 0px 5px;
     border-radius: 6px;
     transition: .5s ease-in;
@@ -78,8 +61,8 @@ h1 {
 
 .arrows {
     font-size: 4em;
-    color: whitesmoke;
-    background-color: #383849;
+    color: rgb(175, 96, 96);
+    background-color: #F1F1F1;
     cursor: pointer;
 }
 
@@ -96,5 +79,59 @@ h1 {
     justify-content: flex-end;
     margin-left: 5px;
     order: 1;
+}
+figcaption {
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+    color: #767272;
+    font-size: 1em;
+}
 
+/* FOOTER */
+#divFooterLinks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: 30px auto 0px auto;
+    
+}
+#footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    font-size: 1.25em;
+    width: 100vw;
+    margin: 0px auto 0px auto;
+    height: 125px;
+    position: absolute;
+    bottom: 0;
+}
+.ftrLinks {
+    color: #8e8b8b;
+    color: #767272;
+    color: #5e5a5a;
+    text-decoration: none;
+}
+.credits {
+    display: flex;
+    justify-content: center;
+    color: #8e8b8b;
+    text-decoration: none;
+    margin: 0px auto 0px auto;
+}
+span a {
+    display: flex;
+    justify-content: center;
+    font-family: 'Kay Pho Du', serif;
+    font-size: .8em;
+    color: #5e5a5a;
+    margin: 0px auto 0px auto;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    color: #8e8b8b;
+    text-decoration: none;
+    margin: 0px auto 0px auto;
 }

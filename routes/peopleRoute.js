@@ -1,4 +1,4 @@
 const express = require('express');
 const router = express.Router();
 
-const people = require('../data/people')
+const people = require('../public/data/people')

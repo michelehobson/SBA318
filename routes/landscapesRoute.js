@@ -1,4 +1,4 @@
 const express = require('express');
 const router = express.Router();
 
-const landscapes = require('../data/landscapes')
+const landscapes = require('../public/data/landscapes')
