@@ -4,20 +4,14 @@ const router = express.Router();
 const animals = require('../public/data/animals')
 const error = require('../public/middleware/errors')
 const h1 = 'Animals'
-const desc = 'Animal'
-
-router.get('/right_btn', () => {
-    rightBtn();
-});
 
 // APPLICATION LEVEL MIDDLEWARE
 router.get('/', (req, res) => {
     const image = [animals[0].image]
     const artist = [animals[0].name]
-    //localStorage.setItem(image, 0);
-    // console.log('Request Type:', req.method)
-    // console.log('Request URL:', req.originalUrl)
-res.render('template', {image, artist, h1, desc});
+    console.log('Request Type:', req.method)
+    console.log('Request URL:', req.originalUrl)
+res.render('template', {image, artist, h1});
 });
 
 router.post('/', (req, res, next) => {
@@ -42,8 +36,7 @@ router.get('/:id', (req, res, next) => {
     if(animal) {
         const image = [animals[animal.id].image]
         const artist = [animals[animal.id].name]
-        //localStorage.setItem(image, animals[animal.id]);
-        res.render('template', {image, artist, h1, desc});
+        res.render('template', {image, artist, h1});
 
     } else {
         next()

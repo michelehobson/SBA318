@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,16 +23,23 @@
     </nav>
     <br>
 
-    <h1><%= h1 %></h1>
+    <h1>
+        <%= h1 %>
+    </h1>
     <div id="images" class="gallery">
-        <div id="b1"><button id="leftBtn" class="arrows">&#10096;</button></div>
+        <div id="b1"><button id="leftBtn" class="arrows" onclick="goLeft">&#10096;</button></div>
         <div>
-            <img src="<%= image %>" alt="Animal Image">
-            <figcaption>Photo by: <%= artist %></figcaption>
+            <img id='newImage2' src="<%= image %>" alt="Animal Image">
+            <figcaption>Photo by: <%= artist %>
+            </figcaption>
         </div>
 
-        <div id="b2"><button id="rightBtn" class="arrows">&#10097;</button></div>
+        <!-- THE FOLLOWING LINE ONLY FIRES THE ONCLICK WHEN THE PAGE IS RENDERED -->
+        <!-- <div id="b2"><button id="rightBtn" class="arrows" onclick=<%/* console.log('JESUS')*/%>>&#10097;</button></div> -->
+        <div id="b2"><button id="rightBtn" class="arrows" onclick=<%= goRight() %>>&#10097;</button></div>
     </div>
+    <button id="upload" onclick="">Upload <%= desc %> Image</button>
+
     <footer id="footer">
         <span class="credits">Express Server Application &nbsp; <span class="separator">|</span> &nbsp; Designed by Michele Hobson</span><br>
         <span class="credits"><a href="https://www.pexels.com">Photos provided by Pexels</a></span>
@@ -46,5 +54,11 @@
         </div>
     </footer>
 
+    <script>
+        function callGoRight() {
+            fetch('/right_btn')
+        }
+    </script>
 </body>
+
 </html>

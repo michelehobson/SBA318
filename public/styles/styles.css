@@ -1,5 +1,5 @@
 body {
-    /* overflow: hidden; */
+    overflow: hidden;
     background-color: #F1F1F1;
 }
 h1 {
@@ -9,6 +9,16 @@ h1 {
     font-weight: 700;
     font-size: 4em;
     margin-top: 100px;
+}
+
+#upload {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    color: #F1F1F1;
+    background-color: rgb(175, 96, 96);
+    cursor: pointer;
+    margin: 10px auto 0px auto;   
 }
 
 /* MENU */
@@ -93,7 +103,7 @@ figcaption {
     flex-flow: row wrap;
     justify-content: space-evenly;
     width: 80vw;
-    margin: 30px auto 0px auto;
+    margin: 25px auto 0px auto;
     
 }
 #footer {
@@ -103,7 +113,7 @@ figcaption {
     font-size: 1.25em;
     width: 100vw;
     margin: 0px auto 0px auto;
-    height: 125px;
+    height: 105px;
     position: absolute;
     bottom: 0;
 }
