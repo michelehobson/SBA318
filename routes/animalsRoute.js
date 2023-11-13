@@ -6,7 +6,6 @@ const error = require('../public/middleware/errors')
 const h1 = 'Animals'
 const desc = 'Animal'
 
-
 // APPLICATION LEVEL MIDDLEWARE
 router.get('/', (req, res) => {
     const image = [animals[0].image]

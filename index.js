@@ -8,11 +8,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 // DEFINE ROUTE CONSTANTS
-// const {error} = require('console');
 const animals = require('./routes/animalsRoute');
 const architecture = require('./routes/architectureRoute');
 const landscapes = require('./routes/landscapeRoute');
-// const home = require('./routes/homeRoute');
 const people = require('./routes/peopleRoute');
 const water = require('./routes/waterRoute');
 const weather = require('./routes/weatherRoute');
@@ -20,7 +18,6 @@ const weather = require('./routes/weatherRoute');
 // USE ROUTES
 app.use('/animals', animals);
 app.use('/architecture', architecture);
-// app.use('/home', home);
 app.use('/landscapes', landscapes);
 app.use('/people', people);
 app.use('/water', water);
