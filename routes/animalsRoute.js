@@ -6,18 +6,12 @@ const error = require('../public/middleware/errors')
 const h1 = 'Animals'
 const desc = 'Animal'
 
-router.get('/right_btn', () => {
-    rightBtn();
-});
 
 // APPLICATION LEVEL MIDDLEWARE
 router.get('/', (req, res) => {
     const image = [animals[0].image]
     const artist = [animals[0].name]
-    //localStorage.setItem(image, 0);
-    // console.log('Request Type:', req.method)
-    // console.log('Request URL:', req.originalUrl)
-res.render('template', {image, artist, h1, desc});
+    res.render('template', {image, artist, h1, desc});
 });
 
 router.post('/', (req, res, next) => {
@@ -34,15 +28,13 @@ router.post('/', (req, res, next) => {
         animals.push(image);
         res.json(animals[animals.length - 1]);
     } else next(error(400, 'The image and photographers name are required'));
-});    
+});
 
 router.get('/:id', (req, res, next) => {
     const animal = animals.find((a) => a.id == req.params.id);
-    console.log(animal.id)
     if(animal) {
         const image = [animals[animal.id].image]
         const artist = [animals[animal.id].name]
-        //localStorage.setItem(image, animals[animal.id]);
         res.render('template', {image, artist, h1, desc});
 
     } else {

@@ -27,16 +27,13 @@
         <%= h1 %>
     </h1>
     <div id="images" class="gallery">
-        <div id="b1"><button id="leftBtn" class="arrows" onclick="goLeft">&#10096;</button></div>
+        <div id="b1"><button id="leftBtn" class="arrows">&#10096;</button></div>
         <div>
-            <img id='newImage2' src="<%= image %>" alt="Animal Image">
+            <img id='newImage' src="<%= image %>" alt="desc Image">
             <figcaption>Photo by: <%= artist %>
             </figcaption>
         </div>
-
-        <!-- THE FOLLOWING LINE ONLY FIRES THE ONCLICK WHEN THE PAGE IS RENDERED -->
-        <!-- <div id="b2"><button id="rightBtn" class="arrows" onclick=<%/* console.log('JESUS')*/%>>&#10097;</button></div> -->
-        <div id="b2"><button id="rightBtn" class="arrows" onclick=<%= goRight() %>>&#10097;</button></div>
+        <div id="b2"><button id="rightBtn" class="arrows">&#10097;</button></div>
     </div>
     <button id="upload" onclick="">Upload <%= desc %> Image</button>
 
@@ -53,12 +50,6 @@
             <a class="ftrLinks" href="weather">Weather</a>
         </div>
     </footer>
-
-    <script>
-        function callGoRight() {
-            fetch('/right_btn')
-        }
-    </script>
 </body>
 
 </html>

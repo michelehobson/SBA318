@@ -8,23 +8,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 // DEFINE ROUTE CONSTANTS
-const animals = require('./routes/animalsRoute');
 // const {error} = require('console');
-// const architecture = require('./routes/architectureRoute');
-// const landscapes = require('./routes/landscapesRoute');
-// const people = require('./routes/peopleRoute');
-// const water = require('./routes/waterRoute');
-// const weather = require('./routes/weatherRoute');
+const animals = require('./routes/animalsRoute');
+const architecture = require('./routes/architectureRoute');
+const landscapes = require('./routes/landscapeRoute');
 // const home = require('./routes/homeRoute');
+const people = require('./routes/peopleRoute');
+const water = require('./routes/waterRoute');
+const weather = require('./routes/weatherRoute');
 
 // USE ROUTES
 app.use('/animals', animals);
-// app.use('/data/architecture', architecture);
-// app.use('/data/home', home);
-// app.use('/data/landscapes', landscapes);
-// app.use('/data/people', people);
-// app.use('/data/water', water);
-// app.use('/data/weather', weather);
+app.use('/architecture', architecture);
+// app.use('/home', home);
+app.use('/landscapes', landscapes);
+app.use('/people', people);
+app.use('/water', water);
+app.use('/weather', weather);
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
