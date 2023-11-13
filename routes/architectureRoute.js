@@ -31,10 +31,10 @@ router.post('/', (req, res, next) => {
 });
 
 router.get('/:id', (req, res, next) => {
-    const architecture = architecture.find((a) => a.id == req.params.id);
-    if(architecture) {
-        const image = [architecture[architecture.id].image]
-        const artist = [architecture[architecture.id].name]
+    const structure = architecture.find((a) => a.id == req.params.id);
+    if(structure) {
+        const image = [architecture[structure.id].image]
+        const artist = [architecture[structure.id].name]
         res.render('template', {image, artist, h1, desc});
 
     } else {

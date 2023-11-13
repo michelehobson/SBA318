@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+const goLeft = require('../public/middleware/leftBtn');
+const goRight = require('../public/middleware/rightBtn');
+
 const animals = require('../public/data/animals')
 const error = require('../public/middleware/errors')
 const h1 = 'Animals'
@@ -10,7 +13,7 @@ const desc = 'Animal'
 router.get('/', (req, res) => {
     const image = [animals[0].image]
     const artist = [animals[0].name]
-    res.render('template', {image, artist, h1, desc});
+    res.render('template', {image, artist, h1, desc, goRight});
 });
 
 router.post('/', (req, res, next) => {
@@ -34,7 +37,7 @@ router.get('/:id', (req, res, next) => {
     if(animal) {
         const image = [animals[animal.id].image]
         const artist = [animals[animal.id].name]
-        res.render('template', {image, artist, h1, desc});
+        res.render('template', {image, artist, h1, desc, goRight});
 
     } else {
         next()

@@ -14,12 +14,12 @@
 <body>
     <nav class="myNavStyle">
         <a class="menuLinkStyle" href="/">Home</a>
-        <a class="menuLinkStyle" href="animals">Animals</a>
-        <a class="menuLinkStyle" href="architecture">Architecture</a>
-        <a class="menuLinkStyle" href="landscapes">Landscapes</a>
-        <a class="menuLinkStyle" href="people">People</a>
-        <a class="menuLinkStyle" href="water">Water</a>
-        <a class="menuLinkStyle" href="weather">Weather</a>
+        <a class="menuLinkStyle" href="../animals">Animals</a>
+        <a class="menuLinkStyle" href="../architecture">Architecture</a>
+        <a class="menuLinkStyle" href="../landscapes">Landscapes</a>
+        <a class="menuLinkStyle" href="../people">People</a>
+        <a class="menuLinkStyle" href="../water">Water</a>
+        <a class="menuLinkStyle" href="../weather">Weather</a>
     </nav>
     <br>
 
@@ -33,8 +33,11 @@
             <figcaption>Photo by: <%= artist %>
             </figcaption>
         </div>
-        <div id="b2"><button id="rightBtn" class="arrows">&#10097;</button></div>
-    </div>
+        <div id="b2"><button id="rightBtn" class="arrows" onclick=<% goRight(5,1)%>>&#10097;</button></div>
+
+        <!-- <div id="b2"><button id="rightBtn" class="arrows" onclick=<% /*goRight()*/ %>>&#10097;</button></div>
+        Cannot convert undefined or null to object -->
+        </div>
     <button id="upload" onclick="">Upload <%= desc %> Image</button>
 
     <footer id="footer">
@@ -42,12 +45,12 @@
         <span class="credits"><a href="https://www.pexels.com">Photos provided by Pexels</a></span>
         <div id="divFooterLinks">
             <a class="ftrLinks" href="home">Home</a>
-            <a class="ftrLinks" href="animals">Animals</a>
-            <a class="ftrLinks" href="architecture">Architecture</a>
-            <a class="ftrLinks" href="landscapes">Landscapes</a>
-            <a class="ftrLinks" href="people">People</a>
-            <a class="ftrLinks" href="water">Water</a>
-            <a class="ftrLinks" href="weather">Weather</a>
+            <a class="ftrLinks" href="../animals">Animals</a>
+            <a class="ftrLinks" href="../architecture">Architecture</a>
+            <a class="ftrLinks" href="../landscapes">Landscapes</a>
+            <a class="ftrLinks" href="../people">People</a>
+            <a class="ftrLinks" href="../water">Water</a>
+            <a class="ftrLinks" href="../weather">Weather</a>
         </div>
     </footer>
 </body>

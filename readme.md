@@ -25,6 +25,7 @@ GitHub Link:
 About my Express Server Application
 Because of the difficulties I experienced with SBA308A and its usage of local storage, I decided to tackle the images. Using one view for my index page (home.ejs), weather.ejs because I needed to manipulate the sizes of those images (not sure why it didn't follow the CSS rules that the others adhered to), and template.ejs which I use to render from six other routes.
 
+*** FIXED: 
 I added links for easier navigation, but I noticed that when I render a specific record (/:id), and I click on a nav link, it returns a 404.  (E.g.):
 1. localhost:1962/animals/2
 2. Click on link: Landscapes
@@ -33,3 +34,6 @@ I added links for easier navigation, but I noticed that when I render a specific
 I added buttons to navigate through the images, but I'm having great difficulty in determing what ejs wants. My onclick event either only fires when the view is rendered or it returns an error depending on the method (not method()) I've used.
 
 I added a button for uploaded, but didn't code the form
+
+I would have liked to:
+1. Combined all of my data into one file and extracted what was needed

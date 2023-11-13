@@ -11,6 +11,8 @@ function goRight(index, who) {
     let param = '';
     switch (who) {
         case 1:
+            console.log("HERE")
+
             param = require('../data/animals');
             break;
 
@@ -18,6 +20,7 @@ function goRight(index, who) {
             break;
     }
         
+    
     console.log('GOING RIGHT: ' + Object.values(param[index]))
     if (index < 12)  {
         return Object.values(param[++index].image);
