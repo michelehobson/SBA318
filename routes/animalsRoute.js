@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const goLeft = require('../public/middleware/leftBtn');
-const animalsGoRight = require('../public/middleware/rightBtn');
-
 const animals = require('../public/data/animals')
 const error = require('../public/middleware/errors')
 const h1 = 'Animals'
@@ -11,9 +8,9 @@ const desc = 'Animal'
 
 // APPLICATION LEVEL MIDDLEWARE
 router.get('/', (req, res) => {
-    const image = [animals[0].image]
-    const artist = [animals[0].name]
-    res.render('template', {image, artist, h1, desc, animalsGoRight});
+    const image = [animals[0].image];
+    const artist = [animals[0].name];
+    res.render('template', {image, artist, h1, desc});
 });
 
 router.post('/', (req, res, next) => {
@@ -37,7 +34,7 @@ router.get('/:id', (req, res, next) => {
     if(animal) {
         const image = [animals[animal.id].image]
         const artist = [animals[animal.id].name]
-        res.render('template', {image, artist, h1, desc, animalsGoRight});
+        res.render('template', {image, artist, h1, desc});
 
     } else {
         next()

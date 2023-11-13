@@ -22,19 +22,16 @@
         <a class="menuLinkStyle" href="../weather">Weather</a>
     </nav>
     <br>
-
     <h1>
         <%= h1 %>
     </h1>
     <div id="images" class="gallery">
-        <div id="b1"><button id="leftBtn" class="arrows">&#10096;</button></div>
         <div>
             <img id='newImage' src="<%= image %>" alt="desc Image">
             <figcaption>Photo by: <%= artist %>
             </figcaption>
         </div>
-        <div id="b2"><button id="rightBtn" class="arrows" onclick=<% animalsGoRight(5)%>>&#10097;</button></div>
-
+    </div>
     <footer id="footer">
         <span class="credits">Express Server Application &nbsp; <span class="separator">|</span> &nbsp; Designed by Michele Hobson</span><br>
         <span class="credits"><a href="https://www.pexels.com">Photos provided by Pexels</a></span>
@@ -48,6 +45,22 @@
             <a class="ftrLinks" href="../weather">Weather</a>
         </div>
     </footer>
+</body>
+
+</html>
+<footer id="footer">
+    <span class="credits">Express Server Application &nbsp; <span class="separator">|</span> &nbsp; Designed by Michele Hobson</span><br>
+    <span class="credits"><a href="https://www.pexels.com">Photos provided by Pexels</a></span>
+    <div id="divFooterLinks">
+        <a class="ftrLinks" href="home">Home</a>
+        <a class="ftrLinks" href="../animals">Animals</a>
+        <a class="ftrLinks" href="../architecture">Architecture</a>
+        <a class="ftrLinks" href="../landscapes">Landscapes</a>
+        <a class="ftrLinks" href="../people">People</a>
+        <a class="ftrLinks" href="../water">Water</a>
+        <a class="ftrLinks" href="../weather">Weather</a>
+    </div>
+</footer>
 </body>
 
 </html>
