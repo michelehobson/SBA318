@@ -1,5 +1,5 @@
 const data = [
-    {id: 1, image:'https://images.pexels.com/photos/17303165/pexels-photo-17303165/free-photo-of-skeleton-exhibits-inside-oxford-university-museum-of-natural-history.jpeg', name:'helloiamtugce'},
+    {id: 1, image:'https://images.pexels.com/photos/298825/pexels-photo-298825.jpeg', name:'Markus Spiske'},
     {id: 2, image:'https://images.pexels.com/photos/5273636/pexels-photo-5273636.jpeg', name:'Julia Volk'},
     {id: 3, image:'https://images.pexels.com/photos/5007785/pexels-photo-5007785.jpeg', name:'Marcos Baistrocchi'},
     {id: 4, image:'https://images.pexels.com/photos/2179666/pexels-photo-2179666.jpeg', name:'Jose Aragones'},
